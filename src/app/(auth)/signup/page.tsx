@@ -8,8 +8,9 @@ function page() {
         Welcome to <span className="text-[#4534AC]">Workflow!</span>
       </h1>
       <Form formType />
-      <div className="text-primary-text">
-        Don’t have an account? Create a{" "}
+
+      <div className="text-primary-text select-none">
+        Already have an account?{" "}
         <Link href="/signin" className="text-blue-700">
           new account
         </Link>

@@ -9,7 +9,7 @@ function page() {
       </h1>
       <Form formType={false} />
       <div className="text-primary-text select-none">
-        Already have an account?{" "}
+        Don’t have an account? Create a{" "}
         <Link href="/signup" className="text-blue-700">
           Log in
         </Link>
