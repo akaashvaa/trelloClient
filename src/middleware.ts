@@ -3,19 +3,10 @@ import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
   const token = request.cookies.get("token");
-  const { pathname } = request.nextUrl;
-  console.log("checking token", token);
 
-  // If the user is not logged in and trying to access a protected route
-  if (!token && pathname !== "/signin" && pathname !== "/signup") {
-    return NextResponse.redirect(new URL("/signin", request.url));
+  if (!token) {
+    return NextResponse.rewrite(new URL("/check-token", request.url));
   }
-
-  // If the user is logged in and trying to access signin or signup pages
-  if (token && (pathname === "/signin" || pathname === "/signup")) {
-    return NextResponse.redirect(new URL("/", request.url));
-  }
-
   return NextResponse.next();
 }
 
