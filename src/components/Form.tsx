@@ -50,7 +50,7 @@ function Form({ formType }: { formType: boolean }) {
     try {
       setLoading(true);
       const { data } = await axios.post(url, fields, { withCredentials: true });
-      console.log(data);
+      console.log(data.message);
       router.push("/");
     } catch (error) {
       console.log(error);
