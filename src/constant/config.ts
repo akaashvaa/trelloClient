@@ -1,3 +1,3 @@
-const URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+const URL = "https://trellobackend-j99r.onrender.com/api/v1";
 
 export { URL };
