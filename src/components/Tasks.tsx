@@ -21,7 +21,7 @@ function Tasks({ type }: { type: TaskTitle }) {
   useEffect(() => {
     dispatch(fetchTodos());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch]);
+  }, []);
   const handleDragEnterCapture = (e: React.DragEvent<HTMLDivElement>) => {
     const sourceStatus = e.dataTransfer.getData("text/plain").split(",")[1];
     if (sourceStatus !== type) {
@@ -50,7 +50,7 @@ function Tasks({ type }: { type: TaskTitle }) {
     }
   };
   if (fetchError !== null) {
-    alert(fetchError);
+    console.log(fetchError);
   }
   return (
     <div

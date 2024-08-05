@@ -1,8 +1,10 @@
+import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  const token = request.cookies.get("token")?.value;
+  const token = cookies().get("token")?.value;
+
   const { pathname } = request.nextUrl;
   console.log("checking token", token);
   // If the user is not logged in and trying to access a protected route

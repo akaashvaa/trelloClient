@@ -2,7 +2,6 @@ import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { URL } from "@/constant/config";
 import axios from "axios";
 import { Priority, TaskTitle } from "@/constant/data";
-
 export interface Task {
   _id: string;
   title: string;
