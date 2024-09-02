@@ -53,11 +53,11 @@ function Form({ formType }: { formType: boolean }) {
       const { data } = await axios.post(url, fields, { withCredentials: true });
       console.log(data.message, data.jwt);
       setCookie(null, 'authToken', data.jwt, {
-    maxAge: 30 * 24 * 60 * 60, 
-    path: '/',
-    secure: location.protocol === 'https:',   
-        sameSite: 'lax',
-});
+        maxAge: 30 * 24 * 60 * 60, 
+        path: '/',
+        secure: location.protocol === 'https:',   
+        sameSite: "none",
+      });
       router.push("/");
     } catch (error) {
       console.log(error);
