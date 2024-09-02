@@ -1,3 +1,3 @@
-const URL = "http://localhost:8000/api/v1";
+const URL = "https://trellobackend-j99r.onrender.com/api/v1";
 
 export { URL };
