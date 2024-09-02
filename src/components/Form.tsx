@@ -5,6 +5,7 @@ import Button, { ButtonType } from "./Button";
 import axios from "axios";
 import { URL } from "@/constant/config";
 import { useRouter } from "next/navigation";
+import { setCookie } from 'nookies';
 
 type SignInForm = {
   email: string;
@@ -50,7 +51,13 @@ function Form({ formType }: { formType: boolean }) {
     try {
       setLoading(true);
       const { data } = await axios.post(url, fields, { withCredentials: true });
-      console.log(data.message);
+      console.log(data.message, data.jwt);
+      setCookie(null, 'authToken', data.jwt, {
+    maxAge: 30 * 24 * 60 * 60, 
+    path: '/',
+    secure: location.protocol === 'https:',   
+        sameSite: 'lax',
+});
       router.push("/");
     } catch (error) {
       console.log(error);
