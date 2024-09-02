@@ -1,20 +1,20 @@
+
+## [Figma](<https://www.figma.com/design/RehXCXScUo9JjDZ86fkC0y/Assignment---Full-Stack-Developer-(Copy)?node-id=0-1&t=6f2iLey6yylbLFXg-0>)
+## solution : 
+[Screencast from 02-09-24 12:57:00 PM IST.webm](https://github.com/user-attachments/assets/7c251a88-165b-4509-80f9-7ce9c8564ea9)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-[Figma](<https://www.figma.com/design/RehXCXScUo9JjDZ86fkC0y/Assignment---Full-Stack-Developer-(Copy)?node-id=0-1&t=6f2iLey6yylbLFXg-0>)
 
-[backend link](https://trellobackend-j99r.onrender.com/)
-First, run the development server:
+## DEVELOPMENT SETUP :
+- command to run server or client
 
 ```bash
 npm run dev
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
